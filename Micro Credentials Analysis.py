@@ -1,7 +1,19 @@
-# importing required packages#
+# requirements: install python packages
+
+# importing all required packages, pandas, numpy, matplotlib, seaborn, requests,...
+import pandas as pd
 import numpy as np
-import matplotlib as
+import seaborn as sb
+import matplotlib.pyplot as plt
+import os
 import scrapy
+
+# importing data file CSV format, rename csv
+
+current_dir_path = os.path.dirname(os.path.realpath(__file__))
+csv = pd.read_csv(os.path.join(current_dir_path, 'JobVacanciesPerSector.csv'))
+
+# importing data using webscraping methode
 from scrapy.crawler import CrawlerProcess
 
 
@@ -20,4 +32,24 @@ class JOBspider(scrapy.Spider):
             html_file.write(response.body)
 
 
-print('html_file')
+# data discovery, column names? number of columns and rows, missing values, duplicate data, primary key?
+pd.set_option('display.max_rows', 50)
+# data type
+print(type(csv))
+# CSV headers
+print(csv.keys())
+# shape of csv
+print(csv.shape)
+
+# data cleaning
+print(csv.value_counts())
+print(csv.duplicated().value_counts())
+print('There are ' + str(len(csv)-len(csv.drop_duplicates())) + ' duplicate rows in the data set')
+print('There are ' + str(csv.isna) + ' missing values in the data set')
+
+# data analysis
+df = pd.DataFrame(csv, columns=['Sector', 'Vacancies'])
+print(df)
+# data visualisation
+
+# analysis conclusion
