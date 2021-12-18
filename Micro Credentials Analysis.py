@@ -17,6 +17,34 @@ csv = pd.read_csv(os.path.join(current_dir_path, 'JobVacanciesPerSector.csv'))
 from scrapy.crawler import CrawlerProcess
 
 
+class Job_Spider(scrapy.Spider):
+    name = "job_spider"
+
+    def start_requests(self):
+        url = 'https://www.jobs.ie/academic_jobs.aspx'
+        yield scrapy.Request(url=url, callback=self.parse_front)
+
+    def parse_front(self, response):
+        job_id = response.css('div.id')
+        job_links = job_id.xpath('./a/@href')
+        links_to_follow = job_links.extract()
+        for url in links_to_follow:
+            yield response.follow(url=url, callback=self.parse_pages)
+
+    def parse_pages(self, response):
+        job_title = response.xpath('//h1[contains(@class,"title")]/text()')
+        job_title_ext = job_title.extract_first().strip()
+        skills_tags = response.css('h4.chapter__title::text')
+        skills_tags_ext = [t.strip() for t in skills_tags.extract()]
+        dc_dict[job_title_ext] = 'job_titles_ext'
+
+dc_dict dict()
+
+process = CrawlerProcess()
+process.crawl('job_spider')
+process.start()
+
+
 class JOBspider(scrapy.Spider):
 
     name = "JOB_spider"
