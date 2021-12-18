@@ -1,3 +1,6 @@
+# importing required packages#
+import numpy as np
+import matplotlib as
 import scrapy
 from scrapy.crawler import CrawlerProcess
 
