@@ -17,12 +17,13 @@ csv = pd.read_csv(os.path.join(current_dir_path, 'JobVacanciesPerSector.csv'))
 from scrapy.crawler import CrawlerProcess
 
 
-class Job_Spider(scrapy.Spider):
+class JobSpider(scrapy.Spider):
     name = "job_spider"
 
     def start_requests(self):
-        url = 'https://www.jobs.ie/academic_jobs.aspx'
-        yield scrapy.Request(url=url, callback=self.parse_front)
+        urls = 'https://www.jobs.ie/academic_jobs.aspx'
+        for url in urls:
+            yield scrapy.Request(url=url, callback=self.parse_front)
 
     def parse_front(self, response):
         job_id = response.css('div.id')
