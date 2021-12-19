@@ -3,62 +3,36 @@
 # importing all required packages, pandas, numpy, matplotlib, seaborn, requests,...
 import pandas as pd
 import numpy as np
+import requests
 import seaborn as sb
 import matplotlib.pyplot as plt
 import os
-import scrapy
+from bs4 import BeautifulSoup
+
 
 # importing data file CSV format, rename csv
 
 current_dir_path = os.path.dirname(os.path.realpath(__file__))
-csv = pd.read_csv(os.path.join(current_dir_path, 'JobVacanciesPerSector.csv'))
+csv = pd.read_csv(os.path.join(current_dir_path, 'Courses.csv'))
 
 # importing data using webscraping methode
-from scrapy.crawler import CrawlerProcess
+home_page = requests.get(url='https://www.jobs.ie').text
+soup = BeautifulSoup(home_page, 'html.parser')
+all_categories = soup.find_all("section", {"class": "jobs-by-category accordion"})[0].find_all("a")
 
+category_names = list()
+category_counts = list()
 
-class JobSpider(scrapy.Spider):
-    name = "job_spider"
+for link in all_categories:
+    category_text = link.next
+    category_count = link.find_all("span")[0].next
+    print(category_text + " " + category_count)
+    category_names.append(category_text)
+    category_counts.append(category_count)
 
-    def start_requests(self):
-        urls = 'https://www.jobs.ie/academic_jobs.aspx'
-        for url in urls:
-            yield scrapy.Request(url=url, callback=self.parse_front)
+output_dict = {"category_text": category_names, "category_count": category_counts}
 
-    def parse_front(self, response):
-        job_id = response.css('div.id')
-        job_links = job_id.xpath('./a/@href')
-        links_to_follow = job_links.extract()
-        for url in links_to_follow:
-            yield response.follow(url=url, callback=self.parse_pages)
-
-    def parse_pages(self, response):
-        job_title = response.xpath('//h1[contains(@class,"title")]/text()')
-        job_title_ext = job_title.extract_first().strip()
-        skills_tags = response.css('h4.chapter__title::text')
-        skills_tags_ext = [t.strip() for t in skills_tags.extract()]
-        dc_dict[job_title_ext] = 'job_titles_ext'
-
-dc_dict dict()
-
-process = CrawlerProcess()
-process.crawl('job_spider')
-process.start()
-
-
-class JOBspider(scrapy.Spider):
-
-    name = "JOB_spider"
-
-    def start_requests(self):
-        urls = ['https://www.jobs.ie/Jobs.aspx']
-        for url in urls:
-            yield scrapy.Request(url=url, callback=self.parse)
-
-    def parse(self, response):
-        html_file = 'Job_Listings.html'
-        with open(html_file, 'wb') as html_file:
-            html_file.write(response.body)
+scraped_df = pd.DataFrame.from_dict(output_dict)
 
 
 # data discovery, column names? number of columns and rows, missing values, duplicate data, primary key?
@@ -71,14 +45,12 @@ print(csv.keys())
 print(csv.shape)
 
 # data cleaning
-print(csv.value_counts())
-print(csv.duplicated().value_counts())
-print('There are ' + str(len(csv)-len(csv.drop_duplicates())) + ' duplicate rows in the data set')
-print('There are ' + str(csv.isna) + ' missing values in the data set')
+
 
 # data analysis
-df = pd.DataFrame(csv, columns=['Sector', 'Vacancies'])
+df = pd.DataFrame(csv, columns=['CourseID', 'skills'])
 print(df)
+
 # data visualisation
 
 # analysis conclusion
