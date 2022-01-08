@@ -10,10 +10,11 @@ import os
 from bs4 import BeautifulSoup
 
 
+
 # importing data file CSV format, rename csv
 
 current_dir_path = os.path.dirname(os.path.realpath(__file__))
-csv = pd.read_csv(os.path.join(current_dir_path, 'Courses.csv'), encoding='cp1252')
+courses = pd.read_csv(os.path.join(current_dir_path, 'Courses.csv'), encoding='cp1252')
 
 # importing data using webscraping methode
 home_page = requests.get(url='https://www.jobs.ie').text
@@ -44,7 +45,7 @@ scraped_df_sorted = scraped_df.sort_values('category_count', ascending=False, in
 
 
 # data analysis
-csv_df = pd.DataFrame(csv, columns=['CourseID', 'skills'])
+courses_df = pd.DataFrame(courses, columns=['CourseID', 'skills'])
 
 
 # group courses by school/department and group by awarding body
@@ -52,9 +53,16 @@ csv_df = pd.DataFrame(csv, columns=['CourseID', 'skills'])
 # slice/subset vacancies based on degree requirements
 # sector_subset = scraped_df.loc[scraped_df.loc['Degree']>0, :]
 # print(sector_subset)
-# course based on credit bearing response true
 
+# creating a for loop
+for type, row in courses.iterrows():
+    if "Institute of Technology" in row ['Awarding Body']:
+        courses.loc[type, "Awarding Body Type"] = "IoT"
+    else:
+        courses.loc[type,"Awarding Body Type"] ='University'
 
+courses.to_csv(r'courses_type.csv')
+courses.head()
 # data visualisation
 
 sns.barplot(x='category_count',
@@ -63,3 +71,5 @@ sns.barplot(x='category_count',
             data=scraped_df)
 plt.show()
 # analysis conclusion
+
+
