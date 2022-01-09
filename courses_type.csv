@@ -1,4 +1,4 @@
-,ID,CourseID,Title,Awarding Body,School,Credit,skills,Awarding Body Type
+,ID,CourseID,Title,Awarding_Body,School,Credit,skills,Awarding Body Type
 0,1,,FinTech - Financial Innovation,Dublin City University,Business,Yes,"Professional development, Finance, Technology, FinTech, Financial services, Blockchain, Cryptocurrencies, InsurTech, Insurance, Big data, Financial modelling",University
 1,2,,Advanced Spatial Analysis using GIS- Micro-credential,Trinity College Dublin,Engineering,Yes,,University
 2,3,,Air Pollution: Monitoring Assessment and Control - Micro-credential,Trinity College Dublin,Engineering,Yes,,University
