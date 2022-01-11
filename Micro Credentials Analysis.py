@@ -14,6 +14,7 @@ from bs4 import BeautifulSoup
 
 current_dir_path = os.path.dirname(os.path.realpath(__file__))
 courses = pd.read_csv(os.path.join(current_dir_path, 'Courses.csv'), encoding='cp1252')
+address = pd.read_csv(os.path.join(current_dir_path, 'Awarding_Body_Address.csv'), encoding='cp1252')
 
 # importing data using webscraping methode (requests and beautifulsoup to parse HTML data)
 home_page = requests.get(url='https://www.jobs.ie').text
@@ -34,10 +35,10 @@ for link in all_categories:
 output_dict = {"category_text": category_names, "category_count": category_counts}
 scraped_df = pd.DataFrame.from_dict(output_dict)
 
-# adding new column 'Degree' in order to sort sectors most likely to benefit from a credit-bearing course
+# adding new column 'Degree' in order to select sectors most likely to benefit from a credit-bearing course
 degree = ['True', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'True', 'False', 'True', 'True', 'True',
           'False', 'True', 'False', 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'False',
-          'True', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'False',
+          'True', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False',
           'True', 'True', 'False', 'False', 'False', 'True', 'False']
 scraped_df['Degree'] = degree
 vacancies_df = scraped_df.loc[scraped_df['Degree'] == 'True']
@@ -45,30 +46,33 @@ vacancies_df = scraped_df.loc[scraped_df['Degree'] == 'True']
 # In order to sort my category_count values, I needed to convert the data type to a float
 vacancies_df["category_count"] = vacancies_df["category_count"].astype(float)
 
-# data cleaning
-courses_df = pd.DataFrame(courses, columns=['ID', 'CourseID', 'Title', 'Awarding_Body', 'School', 'Credit', 'skills'])
+# creating a for loop to add the type of awarding body
+for Type, row in courses.iterrows():
+    if "Institute of Technology" in row['Awarding_Body']:
+        courses.loc[Type, "Awarding_Body_Type"] = "IoT"
+    else:
+        courses.loc[Type, "Awarding_Body_Type"] = 'University'
+
+courses.to_csv(r'courses_type.csv')
+courses_type = pd.read_csv(os.path.join(current_dir_path, 'courses_type.csv'))
+
+# removing duplicates from the courses dataframe
+courses_df = pd.DataFrame(courses_type, columns=['ID', 'CourseID', 'Title', 'Awarding_Body', 'School', 'Credit',
+                                                 'skills', 'Awarding_Body_Short', 'Course_Area', 'Course_Area_ID',
+                                                 'Awarding_Body_Type'])
 print("There are " + str(courses_df.duplicated(subset=['CourseID', 'Title']).sum()) + " duplicates in this dataframe.")
 
 clean_courses_df = courses_df.drop_duplicates(subset=['CourseID', 'Title'], keep='first')
 print("There are " + str(clean_courses_df.duplicated(subset=['CourseID', 'Title']).sum()) +
       " duplicates after the drop function was used.")
-# data analysis
+
+# merging the clean courses dataframe together with the Address dataframe
+address_df = pd.DataFrame(address, columns=['Awarding_Body', 'Full_Address', 'County', 'Country'])
+merged_df = pd.merge(clean_courses_df, address_df, on='Awarding_Body', how='left')
 
 
-# group courses by school/department and group by awarding body
-# percentage of vacancies per sector
-# slice/subset vacancies based on degree requirements
-# sector_subset = scraped_df.loc[scraped_df.loc['Degree']>0, :]
-# print(sector_subset)
-
-# creating a for loop
-for Type, row in courses.iterrows():
-    if "Institute of Technology" in row['Awarding_Body']:
-        courses.loc[Type, "Awarding Body Type"] = "IoT"
-    else:
-        courses.loc[Type, "Awarding Body Type"] = 'University'
-
-courses.to_csv(r'courses_type.csv')
+# grouping the course data by course area ID to provide me with a total count of courses per area
+merged_df_group_course_area = merged_df.groupby(['Course_Area_ID']).count()
 
 # data visualisation
 
@@ -76,7 +80,7 @@ courses.to_csv(r'courses_type.csv')
 sns.barplot(x="category_count",
             y="category_text",
             data=vacancies_df,
-            order=vacancies_df.sort_values('category_count',ascending = False).category_text)
+            order=vacancies_df.sort_values('category_count', ascending=False).category_text)
 plt.xlabel("Vacancies", size=15)
 plt.ylabel("Sector's", size=15)
 plt.title("Number of vacancies per sector", size=18)
@@ -84,15 +88,99 @@ plt.savefig("VacanciesPerSector.png", dpi=100)
 plt.show()
 
 # visuals for course data
-sns.countplot(y="Awarding_Body",
-              data=clean_courses_df)
+sns.countplot(y="Awarding_Body_Short",
+              data=merged_df)
 plt.xlabel("# of Courses", size=15)
 plt.ylabel("Awarding Body", size=15)
 plt.title("Number of courses per awarding body", size=18)
 plt.savefig("CoursesPerAwardingBody.png", dpi=100)
 plt.show()
 
-sns.displot(data=clean_courses_df, y="Awarding_Body")
+sns.countplot(y="County",
+              data=merged_df)
+plt.xlabel("# of Courses", size=15)
+plt.ylabel("County", size=15)
+plt.title("Number of courses per County", size=18)
+plt.savefig("CoursesPerCounty.png", dpi=100)
 plt.show()
 
-# analysis conclusion
+
+plt.subplot(111, polar=True)
+plt.bar(x=0, height=10, width=np.pi/2, bottom=5)
+vacancies_df = vacancies_df.sort_values(by=['category_count'])
+plt.figure(figsize=(20, 10))
+ax = plt.subplot(111, polar=True)
+plt.axis('off')
+upperLimit = 100
+lowerLimit = 30
+max = vacancies_df['category_count'].max()
+slope = (max - lowerLimit) / max
+heights = slope * vacancies_df.category_count + lowerLimit
+width = 2*np.pi / len(vacancies_df.index)
+indexes = list(range(1, len(vacancies_df.index)+1))
+angles = [element * width for element in indexes]
+plt.title("NUMBER OF VACANCIES PER SECTOR", size=15)
+
+bars = ax.bar(
+    x=angles,
+    height=heights,
+    width=width,
+    bottom=lowerLimit,
+    linewidth=2,
+    edgecolor="white",
+    color="#A020F0")
+
+labelPadding = 4
+for bar, angle, height, label in zip(bars,angles, heights, vacancies_df["category_text"]):
+    rotation = np.rad2deg(angle)
+    alignment = ""
+    if angle >= np.pi/2 and angle < 3*np.pi/2:
+        alignment = "right"
+        rotation = rotation + 180
+    else:
+        alignment = "left"
+
+    ax.text(
+        x=angle,
+        y=lowerLimit + bar.get_height() + labelPadding,
+        s=label,
+        ha=alignment,
+        va='center',
+        rotation=rotation,
+        rotation_mode="anchor",
+        fontsize=7)
+plt.savefig("VacanciesPerSectorCircle.png", dpi=100)
+plt.show()
+
+
+#  Reorder it based on values:
+ordered_df = merged_df_group_course_area.sort_values(by='Course_Area')
+my_range = range(1, len(merged_df_group_course_area.index) + 1)
+
+# Create a color if the group is "B"
+my_color = np.where(ordered_df['Course_Area'] == 'Healthcare / Medical / Nursing', 'orange', 'skyblue')
+my_size = np.where(ordered_df['Course_Area'] == 'Healthcare / Medical / Nursing', 70, 30)
+
+# The horizontal plot is made using the hline() function
+plt.hlines(y=my_range, xmin=0, xmax=ordered_df['ID'], color=my_color, alpha=0.4)
+plt.scatter(ordered_df['Course_Area'], my_range, color=my_color, s=my_size, alpha=1)
+
+# Add title and axis names
+plt.yticks(my_range, ordered_df['Course_Area'])
+plt.title("DISTRIBUTION OF COURSES PER AREA", loc='left')
+plt.xlabel('# of courses')
+plt.ylabel('Course_Area')
+plt.savefig("Course_Area.png", dpi=100)
+# show the graph
+plt.show()
+
+
+sns.barplot(x="ID",
+            y="Course_Area",
+            data=merged_df_group_course_area,
+            order=merged_df_group_course_area.sort_values('ID', ascending=False).Course_Area)
+plt.xlabel("# of Courses", size=15)
+plt.ylabel("Course Area", size=15)
+plt.title("DISTRIBUTION OF COURSES PER AREA", size=18)
+plt.savefig("CoursesPerArea.png", dpi=100)
+plt.show()
