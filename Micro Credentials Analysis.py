@@ -8,6 +8,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import os
 from bs4 import BeautifulSoup
+import squarify
 
 # importing data file CSV format, rename csv
 
