@@ -9,7 +9,6 @@ import matplotlib.pyplot as plt
 import os
 from bs4 import BeautifulSoup
 
-
 # importing data file CSV format, rename csv
 
 current_dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -72,7 +71,7 @@ merged_df = pd.merge(clean_courses_df, address_df, on='Awarding_Body', how='left
 
 
 # grouping the course data by course area ID to provide me with a total count of courses per area
-merged_df_group_course_area = merged_df.groupby(['Course_Area_ID']).count()
+merged_group_course_area = merged_df['Course_Area'].value_counts()
 
 # data visualisation
 
@@ -88,19 +87,28 @@ plt.savefig("VacanciesPerSector.png", dpi=100)
 plt.show()
 
 # visuals for course data
+palette = ['tab:purple', 'tab:pink']
 sns.countplot(y="Awarding_Body_Short",
-              data=merged_df)
+              data=merged_df,
+              hue='Awarding_Body_Type',
+              palette=palette,
+              order=merged_df['Awarding_Body_Short'].value_counts().index)
+plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
 plt.xlabel("# of Courses", size=15)
 plt.ylabel("Awarding Body", size=15)
-plt.title("Number of courses per awarding body", size=18)
+plt.title("NUMBER OF COURSES PER AWARDING BODY", size=18)
 plt.savefig("CoursesPerAwardingBody.png", dpi=100)
 plt.show()
 
 sns.countplot(y="County",
-              data=merged_df)
+              data=merged_df,
+              hue='Awarding_Body_Type',
+              palette=palette,
+              order=merged_df['County'].value_counts().index)
+plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
 plt.xlabel("# of Courses", size=15)
 plt.ylabel("County", size=15)
-plt.title("Number of courses per County", size=18)
+plt.title("NUMBER OF COURSES PER COUNTY", size=18)
 plt.savefig("CoursesPerCounty.png", dpi=100)
 plt.show()
 
@@ -120,7 +128,6 @@ width = 2*np.pi / len(vacancies_df.index)
 indexes = list(range(1, len(vacancies_df.index)+1))
 angles = [element * width for element in indexes]
 plt.title("NUMBER OF VACANCIES PER SECTOR", size=15)
-
 bars = ax.bar(
     x=angles,
     height=heights,
@@ -129,7 +136,6 @@ bars = ax.bar(
     linewidth=2,
     edgecolor="white",
     color="#A020F0")
-
 labelPadding = 4
 for bar, angle, height, label in zip(bars,angles, heights, vacancies_df["category_text"]):
     rotation = np.rad2deg(angle)
@@ -152,35 +158,11 @@ for bar, angle, height, label in zip(bars,angles, heights, vacancies_df["categor
 plt.savefig("VacanciesPerSectorCircle.png", dpi=100)
 plt.show()
 
-
-#  Reorder it based on values:
-ordered_df = merged_df_group_course_area.sort_values(by='Course_Area')
-my_range = range(1, len(merged_df_group_course_area.index) + 1)
-
-# Create a color if the group is "B"
-my_color = np.where(ordered_df['Course_Area'] == 'Healthcare / Medical / Nursing', 'orange', 'skyblue')
-my_size = np.where(ordered_df['Course_Area'] == 'Healthcare / Medical / Nursing', 70, 30)
-
-# The horizontal plot is made using the hline() function
-plt.hlines(y=my_range, xmin=0, xmax=ordered_df['ID'], color=my_color, alpha=0.4)
-plt.scatter(ordered_df['Course_Area'], my_range, color=my_color, s=my_size, alpha=1)
-
-# Add title and axis names
-plt.yticks(my_range, ordered_df['Course_Area'])
-plt.title("DISTRIBUTION OF COURSES PER AREA", loc='left')
-plt.xlabel('# of courses')
-plt.ylabel('Course_Area')
-plt.savefig("Course_Area.png", dpi=100)
-# show the graph
-plt.show()
-
-
-sns.barplot(x="ID",
-            y="Course_Area",
-            data=merged_df_group_course_area,
-            order=merged_df_group_course_area.sort_values('ID', ascending=False).Course_Area)
-plt.xlabel("# of Courses", size=15)
+sns.countplot(y="Course_Area",
+              data=merged_df,
+              order=merged_df['Course_Area'].value_counts().index)
+plt.xlabel("# of Courses per Area", size=15)
 plt.ylabel("Course Area", size=15)
-plt.title("DISTRIBUTION OF COURSES PER AREA", size=18)
+plt.title("NUMBER OF COURSES PER AREA", size=18)
 plt.savefig("CoursesPerArea.png", dpi=100)
 plt.show()
