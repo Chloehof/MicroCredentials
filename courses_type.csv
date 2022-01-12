@@ -70,7 +70,7 @@
 68,69,,MK8104 Negotiation Skills,"National University of Ireland, Galway",Business & Management,yes,"Negotiation is a dialogue to discover common ground among parties with differing aims, needs and perspectives in order to achieve a solution that as far as possible meets people's interests. It is a process by which parties pursue a mutually acceptable outcome, which typically involves elements of creativity and compromise. Dates are subject to change.",NUIGalway,Managers / Supervisors,13,University
 69,70,,EC201 Intermediate Microeconomics (March),"National University of Ireland, Galway",Business & Management,yes,This course is designed for students from a non-economics background who are thinking of applying for a postgraduate programme such as the M. Sc. (Health Economics or MSc (Global Environmental Economics) at NUI Galway that requires applicants to have taken a preparatory course in microeconomics.,NUIGalway,Financial Services,8,University
 70,71,,DT1146 Organisational Behaviour,"National University of Ireland, Galway",Science & Technology Undergrad,yes,"In this module you will learn about Organisational Behaviour, that is, you will learn about individuals and groups in organisations. Learning about Organisational Behaviour will help you to better understand yourself and others in the workplace.",NUIGalway,Managers / Supervisors,13,University
-71,72,,BS1170 Automation 2,"National University of Ireland, Galway",Science & Technology Undergrad,no,"The aim of the Automation 2 module is to give you some important insights into the application of automation in industry as detailed in the module aims of Automation 1. The Automation 2 module introduces material transport systems, outlines the use of storage systems, and presents an overview of automated manufacturing.",NUIGalway,IT,11,University
+71,72,,BS1170 Automation 2,"National University of Ireland, Galway",Science & Technology Undergrad,Yes,"The aim of the Automation 2 module is to give you some important insights into the application of automation in industry as detailed in the module aims of Automation 1. The Automation 2 module introduces material transport systems, outlines the use of storage systems, and presents an overview of automated manufacturing.",NUIGalway,IT,11,University
 72,73,,BS1153 Lean Thinking & Lean Tools,"National University of Ireland, Galway",Science & Technology Undergrad,yes,The module consists of 16 units which take the student through the history and development of Lean thinking; explores Lean principles including Value & Waste; and explains several of the main Lean tools & techniques.,NUIGalway,Managers / Supervisors,13,University
 73,74,,BS1160 Medical Device Science,"National University of Ireland, Galway",Science & Technology Undergrad,yes,"Module Objectives: To understand the practical application of materials, mechanics and stress analysis theory in the design of medical devices.To understand the clinical need, function and design requirements of the most widely used orthopaedic and vascular medical devices. To understand the effects of mechanical loading (static, fatigue, wear) and environment on medical devices.",NUIGalway,Healthcare / Medical / Nursing,9,University
 74,75,,DT1157 Design of Engineering Systems,"National University of Ireland, Galway",Science & Technology Undergrad,yes,"Design of Engineering Systems represents a complex interconnection of many elements to maximise performance. This science relates to all fields of engineering, and requires contribution from diverse technical disciplines. It involves the combined effort of all the team involved in the design process, leading to a structured development process that proceeds from conception to production to operation, and in some cases to termination and disposal.",NUIGalway,Construction / Engineering,5,University
@@ -145,33 +145,33 @@ The module introduces analytical chemistry by describing the entire lifecycle of
 142,143,EH6093,Introduction to Research Methods and Epidemiology ,University College Cork,School of Public Health,Yes,,UCC,Healthcare / Medical / Nursing,9,University
 143,144,EH6097,Introduction to Social Research in Public Health Online,University College Cork,School of Public Health,Yes,,UCC,Healthcare / Medical / Nursing,9,University
 144,145,EH6108,Management of Psychosocial Workplace Risks:  Theory and Practice Online,University College Cork,School of Public Health,Yes,,UCC,Healthcare / Medical / Nursing,9,University
-145,146,CPD1621, An Introduction to Clinical Pastoral Education for Healthcare Professionals ,University College Cork,School of Nursing and Midwifery,No,,UCC,Healthcare / Medical / Nursing,9,University
-146,147,CPD1702, Adult IV Cannulation and Administration Course for Radiographers and Radiation Therapists ,University College Cork,School of Nursing and Midwifery,No,,UCC,Healthcare / Medical / Nursing,9,University
-147,148,CPD1602," Interdisciplinary Perspectives on Social Justice, Equality, Diversity and Health",University College Cork,School of Nursing and Midwifery,No,,UCC,Healthcare / Medical / Nursing,9,University
-148,149,CPD1739, Maximising Impact with Rehabilitation,University College Cork,School of Nursing and Midwifery,No,,UCC,Healthcare / Medical / Nursing,9,University
+145,146,CPD1621, An Introduction to Clinical Pastoral Education for Healthcare Professionals ,University College Cork,School of Nursing and Midwifery,Yes,,UCC,Healthcare / Medical / Nursing,9,University
+146,147,CPD1702, Adult IV Cannulation and Administration Course for Radiographers and Radiation Therapists ,University College Cork,School of Nursing and Midwifery,Yes,,UCC,Healthcare / Medical / Nursing,9,University
+147,148,CPD1602," Interdisciplinary Perspectives on Social Justice, Equality, Diversity and Health",University College Cork,School of Nursing and Midwifery,Yes,,UCC,Healthcare / Medical / Nursing,9,University
+148,149,CPD1739, Maximising Impact with Rehabilitation,University College Cork,School of Nursing and Midwifery,Yes,,UCC,Healthcare / Medical / Nursing,9,University
 149,150,IT6104,Teaching of Italian as a Second Language 1,University College Cork,"College of Arts, Celtic Studies, Social Sciences",Yes,,UCC,Education / Training,6,University
 150,151,IT6105,Teaching of Italian as a Second Language 2,University College Cork,"College of Arts, Celtic Studies, Social Sciences",Yes,,UCC,Education / Training,6,University
-151,152,CPD1617,Practice Teacher (Social Work) 2 Day Training,University College Cork,"College of Arts, Celtic Studies, Social Sciences",No,,UCC,Education / Training,6,University
-152,153,CPD1682, An Ghaeilge sa Seomra Ranga,University College Cork,"College of Arts, Celtic Studies, Social Sciences",No,,UCC,Education / Training,6,University
-153,154,CPD1694,Presentations & Public Speaking Skills for Medical Social Workers,University College Cork,"College of Arts, Celtic Studies, Social Sciences",No,,UCC,Healthcare / Medical / Nursing,9,University
-154,155,CPD1607,Social Media and Students: Challenges for Teachers ,University College Cork,Applied Psychology,No,,UCC,Online /Digital Media,17,University
-155,156,CPD1607,Social Media and Children: Challenges for Professionals   ,University College Cork,Applied Psychology,No,,UCC,Online /Digital Media,17,University
-156,157,CPD1731,Global Sustainable Development: Interdisciplinary Perspectives,University College Cork,Applied Social Studies,No,,UCC,Pharmaceutical / Science / Agriculture,18,University
-157,158,CPD1617,Practice Teachers - Social Work,University College Cork,Applied Social Studies,No,,UCC,Education / Training,6,University
-158,159,CPD1682, An Ghaeilge sa Seomra Ranga,University College Cork,Irish,No,,UCC,Education / Training,6,University
+151,152,CPD1617,Practice Teacher (Social Work) 2 Day Training,University College Cork,"College of Arts, Celtic Studies, Social Sciences",Yes,,UCC,Education / Training,6,University
+152,153,CPD1682, An Ghaeilge sa Seomra Ranga,University College Cork,"College of Arts, Celtic Studies, Social Sciences",Yes,,UCC,Education / Training,6,University
+153,154,CPD1694,Presentations & Public Speaking Skills for Medical Social Workers,University College Cork,"College of Arts, Celtic Studies, Social Sciences",Yes,,UCC,Healthcare / Medical / Nursing,9,University
+154,155,CPD1607,Social Media and Students: Challenges for Teachers ,University College Cork,Applied Psychology,Yes,,UCC,Online /Digital Media,17,University
+155,156,CPD1607,Social Media and Children: Challenges for Professionals   ,University College Cork,Applied Psychology,Yes,,UCC,Online /Digital Media,17,University
+156,157,CPD1731,Global Sustainable Development: Interdisciplinary Perspectives,University College Cork,Applied Social Studies,Yes,,UCC,Pharmaceutical / Science / Agriculture,18,University
+157,158,CPD1617,Practice Teachers - Social Work,University College Cork,Applied Social Studies,Yes,,UCC,Education / Training,6,University
+158,159,CPD1682, An Ghaeilge sa Seomra Ranga,University College Cork,Irish,Yes,,UCC,Education / Training,6,University
 159,160,CC6008,Palaeography and Manuscript-based Research (10 Credits),University College Cork,Palaeography and Manuscript-based Research,Yes,,UCC,Academic,1,University
-160,161,CPD1607,Social Media and Students: Challenges for Teachers,University College Cork,School of Education,No,,UCC,Online /Digital Media,17,University
-161,162,CPD1607,Social Media and Children: Challenges for Professionals,University College Cork,School of Education,No,,UCC,Online /Digital Media,17,University
+160,161,CPD1607,Social Media and Students: Challenges for Teachers,University College Cork,School of Education,Yes,,UCC,Online /Digital Media,17,University
+161,162,CPD1607,Social Media and Children: Challenges for Professionals,University College Cork,School of Education,Yes,,UCC,Online /Digital Media,17,University
 162,163,IT6104,Teaching of Italian as a second language I     ,University College Cork,"School of Languages, Literatures and Cultures",Yes,,UCC,Education / Training,6,University
 163,164,IT6105,Teaching of Italian as a second language II   ,University College Cork,"School of Languages, Literatures and Cultures",Yes,,UCC,Education / Training,6,University
-164,165,CPD1626,Spanish Beginners Intensive A2,University College Cork,"School of Languages, Literatures and Cultures",No,,UCC,Multi-lingual,16,University
-165,166,CPD1665,International Conference on Ecocosmology and Sustainability,University College Cork,"Philosophy, Sociology, Criminology, Government and Politics",No,,UCC,Pharmaceutical / Science / Agriculture,18,University
-166,167,CPD1604, Procurement Workshop: Spend Analysis,University College Cork,College of Business & Law,No,,UCC,Legal,12,University
-167,168,CPD1614,Reading for Transformation Book Circle,University College Cork,College of Business & Law,No,,UCC,Legal,12,University
-168,169,CPD1616,International Children's Rights,University College Cork,Business and Law,No,,UCC,Legal,12,University
-169,170,CPD1616,International Children's Rights,University College Cork,Business and Law,No,,UCC,Legal,12,University
-170,171,CPD1603,Law of Ship Finance,University College Cork,Business and Law,No,,UCC,Financial Services,8,University
-171,172,CPD1773,Food Industry Lean Green Belt Training.,University College Cork,"College of Science, Engineering & Food Science",No,,UCC,Pharmaceutical / Science / Agriculture,18,University
+164,165,CPD1626,Spanish Beginners Intensive A2,University College Cork,"School of Languages, Literatures and Cultures",Yes,,UCC,Multi-lingual,16,University
+165,166,CPD1665,International Conference on Ecocosmology and Sustainability,University College Cork,"Philosophy, Sociology, Criminology, Government and Politics",Yes,,UCC,Pharmaceutical / Science / Agriculture,18,University
+166,167,CPD1604, Procurement Workshop: Spend Analysis,University College Cork,College of Business & Law,Yes,,UCC,Legal,12,University
+167,168,CPD1614,Reading for Transformation Book Circle,University College Cork,College of Business & Law,Yes,,UCC,Legal,12,University
+168,169,CPD1616,International Children's Rights,University College Cork,Business and Law,Yes,,UCC,Legal,12,University
+169,170,CPD1616,International Children's Rights,University College Cork,Business and Law,Yes,,UCC,Legal,12,University
+170,171,CPD1603,Law of Ship Finance,University College Cork,Business and Law,Yes,,UCC,Financial Services,8,University
+171,172,CPD1773,Food Industry Lean Green Belt Training.,University College Cork,"College of Science, Engineering & Food Science",Yes,,UCC,Pharmaceutical / Science / Agriculture,18,University
 172,173,GL6024,Applied Geophysics ,University College Cork,"College of Science, Engineering & Food Science",Yes,,UCC,Pharmaceutical / Science / Agriculture,18,University
 173,174,GL6025,Geoinformatics for Environmental Geology ,University College Cork,"College of Science, Engineering & Food Science",Yes,,UCC,Pharmaceutical / Science / Agriculture,18,University
 174,175,CPD1740,Geology for Leaving Certificate Geography Teachers,University College Cork,"College of Science, Engineering & Food Science",Yes,,UCC,Pharmaceutical / Science / Agriculture,18,University
@@ -181,15 +181,15 @@ The module introduces analytical chemistry by describing the entire lifecycle of
 178,179,EV6015,Water Quality Monitoring and Assessment in Rivers/Lakes/Reservoirs  ,University College Cork,"College of Science, Engineering & Food Science",Yes,,UCC,Pharmaceutical / Science / Agriculture,18,University
 179,180,EV6016,Water Quality Monitoring and Assessment of Groundwater  ,University College Cork,"College of Science, Engineering & Food Science",Yes,,UCC,Pharmaceutical / Science / Agriculture,18,University
 180,181,EV6017,Freshwater Quality Monitoring with Biota and Particulate Matter  ,University College Cork,"College of Science, Engineering & Food Science",Yes,,UCC,Pharmaceutical / Science / Agriculture,18,University
-181,182,CPD004,Field Skills for Freshwater Quality Monitoring,University College Cork,"College of Science, Engineering & Food Science",No,,UCC,Pharmaceutical / Science / Agriculture,18,University
-182,183,CPD1687,Enhancing Student Learning Through Professionalising Digital Education,University College Cork,"Centre for Integration of Research, Teaching and Learning",No,,UCC,Academic,1,University
-183,184,CPD1608,Summer School for Visiting Lecturers,University College Cork,"Centre for Integration of Research, Teaching and Learning",No,,UCC,Academic,1,University
-184,185,CPD1731,Global Sustainable Development,University College Cork,General Interest,No,,UCC,Pharmaceutical / Science / Agriculture,18,University
-185,186,CPD1602,"Interdisciplinary Perspectives on Social Justice, Equality, Diversity and Health",University College Cork,General Interest,No,,UCC,Healthcare / Medical / Nursing,9,University
-186,187,CPD1640,Sustainability,University College Cork,General Interest,No,,UCC,Pharmaceutical / Science / Agriculture,18,University
-187,188,CPD1614, Reading for Transformation Book Circle,University College Cork,General Interest,No,,UCC,Academic,1,University
-188,189,CPD1680, Symposium on Gender Equality and Intersectionality,University College Cork,General Interest,No,,UCC,HR / Recruitment,10,University
-189,190,CPD1678,Research Skills Training Programme,University College Cork,Research,No,,UCC,Academic,1,University
+181,182,CPD004,Field Skills for Freshwater Quality Monitoring,University College Cork,"College of Science, Engineering & Food Science",Yes,,UCC,Pharmaceutical / Science / Agriculture,18,University
+182,183,CPD1687,Enhancing Student Learning Through Professionalising Digital Education,University College Cork,"Centre for Integration of Research, Teaching and Learning",Yes,,UCC,Academic,1,University
+183,184,CPD1608,Summer School for Visiting Lecturers,University College Cork,"Centre for Integration of Research, Teaching and Learning",Yes,,UCC,Academic,1,University
+184,185,CPD1731,Global Sustainable Development,University College Cork,General Interest,Yes,,UCC,Pharmaceutical / Science / Agriculture,18,University
+185,186,CPD1602,"Interdisciplinary Perspectives on Social Justice, Equality, Diversity and Health",University College Cork,General Interest,Yes,,UCC,Healthcare / Medical / Nursing,9,University
+186,187,CPD1640,Sustainability,University College Cork,General Interest,Yes,,UCC,Pharmaceutical / Science / Agriculture,18,University
+187,188,CPD1614, Reading for Transformation Book Circle,University College Cork,General Interest,Yes,,UCC,Academic,1,University
+188,189,CPD1680, Symposium on Gender Equality and Intersectionality,University College Cork,General Interest,Yes,,UCC,HR / Recruitment,10,University
+189,190,CPD1678,Research Skills Training Programme,University College Cork,Research,Yes,,UCC,Academic,1,University
 190,191,PHAR S8019 , (Bio)Pharmaceutical Manufacturing and Supply Chain Management ,Dundalk Institute of Technology,Science,Yes,,DKIT,Warehouse / Logistics / Shipping,21,IoT
 191,192,No ID Found,Bioinformatics in Agriculture,Dundalk Institute of Technology,Crop and livestock production,Yes,,DKIT,Pharmaceutical / Science / Agriculture,18,IoT
 192,193,CULN B8001 , Culinary Business Development ,Dundalk Institute of Technology,"Hotel, restaurant and catering",Yes,,DKIT,Marketing /Market Research,15,IoT
@@ -845,45 +845,45 @@ The module introduces analytical chemistry by describing the entire lifecycle of
 842,843,YTWK H7004 , Youth Work as a Professional Discipline ,Dundalk Institute of Technology,Social work and counselling,Yes,,DKIT,Healthcare / Medical / Nursing,9,IoT
 843,844,No ID Found,Certificate in Hotel Revenue and Digital Media Management,Letterkenny Institute of Technology,"Department of Hospitality, Tourism & Culinary Arts",Yes,,LYIT,Online /Digital Media,17,IoT
 844,845,No ID Found,Certificate in Contemporary Healthcare Management,Letterkenny Institute of Technology,"Department of Hospitality, Tourism & Culinary Arts",Yes,,LYIT,Healthcare / Medical / Nursing,9,IoT
-845,846,No ID Found,Quality Statistics and Management,Galway Mayo Institute of Technology,Business & Administration,,,GMIT,Managers / Supervisors,13,IoT
-846,847,No ID Found,School Age Childcare,Galway Mayo Institute of Technology,Early Childhood Studies,,,GMIT,Healthcare / Medical / Nursing,9,IoT
-847,848,No ID Found,Supervisory Management,Galway Mayo Institute of Technology,Business & Administration,,,GMIT,Managers / Supervisors,13,IoT
-848,849,No ID Found,Automation and Robotics,Galway Mayo Institute of Technology,"Engineering, Manufacturing and Construction",,,GMIT,Manufacturing / Engineering,14,IoT
-849,850,No ID Found,Business Analytics,Galway Mayo Institute of Technology,Business & Administration,,,GMIT,Big Data / Business Analysis,4,IoT
-850,851,No ID Found,Civil Engineering,Galway Mayo Institute of Technology,"Engineering, Manufacturing and Construction",,,GMIT,Construction / Engineering,5,IoT
-851,852,No ID Found,Computerised Systems and Data Quality for Medtech,Galway Mayo Institute of Technology,Computing,,,GMIT,IT,11,IoT
-852,853,No ID Found,Computing in Data Analytics,Galway Mayo Institute of Technology,Computing,,,GMIT,Big Data / Business Analysis,4,IoT
-853,854,No ID Found,Digital Mapping and Geographical Information Systems,Galway Mayo Institute of Technology,Computing,,,GMIT,IT,11,IoT
-854,855,No ID Found,Gaeilge Fheidhmeach agus Aistriuchan,Galway Mayo Institute of Technology,Humanities and Arts,,,GMIT,Architecture / Design,3,IoT
-855,856,No ID Found,Medical Technology Regulatory Affairs,Galway Mayo Institute of Technology,Health Science,,,GMIT,Healthcare / Medical / Nursing,9,IoT
-856,857,No ID Found,Peer Support Practice,Galway Mayo Institute of Technology,Early Childhood Studies,,,GMIT,Healthcare / Medical / Nursing,9,IoT
-857,858,No ID Found,Quality for Industry,Galway Mayo Institute of Technology,Business & Administration,,,GMIT,Managers / Supervisors,13,IoT
-858,859,No ID Found,Art and Design (P/T),Galway Mayo Institute of Technology,Humanities and Arts,,,GMIT,Architecture / Design,3,IoT
-859,860,No ID Found,Automation and Robotics,Galway Mayo Institute of Technology,"Engineering, Manufacturing and Construction",,,GMIT,Manufacturing / Engineering,14,IoT
-860,861,No ID Found,Contemporary Art Practices,Galway Mayo Institute of Technology,Humanities and Arts,,,GMIT,Architecture / Design,3,IoT
-861,862,No ID Found,Data Cybersecurity,Galway Mayo Institute of Technology,Computing,,,GMIT,IT,11,IoT
-862,863,No ID Found,Financial and Economic Environment,Galway Mayo Institute of Technology,Business & Administration,,,GMIT,Managers / Supervisors,13,IoT
-863,864,No ID Found,Human Resource Management,Galway Mayo Institute of Technology,Business & Administration,,,GMIT,HR / Recruitment,10,IoT
-864,865,No ID Found,Industrial Automation,Galway Mayo Institute of Technology,"Engineering, Manufacturing and Construction",,,GMIT,Manufacturing / Engineering,14,IoT
-865,866,No ID Found,Law and Human Resource Management,Galway Mayo Institute of Technology,Business & Administration,,,GMIT,HR / Recruitment,10,IoT
-866,867,No ID Found,Management for Supervisors,Galway Mayo Institute of Technology,Business & Administration,,,GMIT,Managers / Supervisors,13,IoT
-867,868,No ID Found,Managing Operations,Galway Mayo Institute of Technology,Business & Administration,,,GMIT,Managers / Supervisors,13,IoT
-868,869,No ID Found,Manufacturing Engineering,Galway Mayo Institute of Technology,"Engineering, Manufacturing and Construction",,,GMIT,Construction / Engineering,5,IoT
-869,870,No ID Found,Network Cybersecurity,Galway Mayo Institute of Technology,Computing,,,GMIT,IT,11,IoT
-870,871,No ID Found,Network Cybersecurity,Galway Mayo Institute of Technology,Computing,,,GMIT,IT,11,IoT
-871,872,No ID Found,Quality and Regulatory Affairs,Galway Mayo Institute of Technology,"Engineering, Manufacturing and Construction",,,GMIT,Manufacturing / Engineering,14,IoT
-872,873,No ID Found,Quality for Industry,Galway Mayo Institute of Technology,"Engineering, Manufacturing and Construction",,,GMIT,Manufacturing / Engineering,14,IoT
-873,874,No ID Found,Quality Management,Galway Mayo Institute of Technology,"Engineering, Manufacturing and Construction",,,GMIT,Manufacturing / Engineering,14,IoT
-874,875,No ID Found,Certificate in Training and Continuing Education (Train the Trainer Level 7),Maynooth University,School of Education,,,MU,Education / Training,6,University
-875,876,No ID Found,Certificate in Psychology,Maynooth University,Applied Psychology,,,MU,Healthcare / Medical / Nursing,9,University
-876,877,No ID Found,Certificate in Local History,Maynooth University,Humanities,,,MU,Academic,1,University
-877,878,No ID Found,Certificate in Equality Studies (On Line) 2021,Maynooth University,School of Social Work and Social Policy,,,MU,Healthcare / Medical / Nursing,9,University
-878,879,No ID Found,Certificate in Disability Studies,Maynooth University,Applied Psychology,,,MU,Healthcare / Medical / Nursing,9,University
-879,880,No ID Found,Certificate in Creative Writing for Publication,Maynooth University,Humanities and Arts,,,MU,Online /Digital Media,17,University
-880,881,No ID Found,Certificate in Community Development and Leadership,Maynooth University,School of Social Work and Social Policy,,,MU,Healthcare / Medical / Nursing,9,University
-881,882,No ID Found,"Certificate in Adult Guidance, Theory and Practice",Maynooth University,School of Social Work and Social Policy,,,MU,Healthcare / Medical / Nursing,9,University
-882,883,No ID Found,Certificate in Adult and Community Education,Maynooth University,School of Education,,,MU,Education / Training,6,University
-883,884,No ID Found,Certificate in Addiction Studies,Maynooth University,Applied Psychology,,,MU,Healthcare / Medical / Nursing,9,University
+845,846,No ID Found,Quality Statistics and Management,Galway Mayo Institute of Technology,Business & Administration,Yes,,GMIT,Managers / Supervisors,13,IoT
+846,847,No ID Found,School Age Childcare,Galway Mayo Institute of Technology,Early Childhood Studies,Yes,,GMIT,Healthcare / Medical / Nursing,9,IoT
+847,848,No ID Found,Supervisory Management,Galway Mayo Institute of Technology,Business & Administration,Yes,,GMIT,Managers / Supervisors,13,IoT
+848,849,No ID Found,Automation and Robotics,Galway Mayo Institute of Technology,"Engineering, Manufacturing and Construction",Yes,,GMIT,Manufacturing / Engineering,14,IoT
+849,850,No ID Found,Business Analytics,Galway Mayo Institute of Technology,Business & Administration,Yes,,GMIT,Big Data / Business Analysis,4,IoT
+850,851,No ID Found,Civil Engineering,Galway Mayo Institute of Technology,"Engineering, Manufacturing and Construction",Yes,,GMIT,Construction / Engineering,5,IoT
+851,852,No ID Found,Computerised Systems and Data Quality for Medtech,Galway Mayo Institute of Technology,Computing,Yes,,GMIT,IT,11,IoT
+852,853,No ID Found,Computing in Data Analytics,Galway Mayo Institute of Technology,Computing,Yes,,GMIT,Big Data / Business Analysis,4,IoT
+853,854,No ID Found,Digital Mapping and Geographical Information Systems,Galway Mayo Institute of Technology,Computing,Yes,,GMIT,IT,11,IoT
+854,855,No ID Found,Gaeilge Fheidhmeach agus Aistriuchan,Galway Mayo Institute of Technology,Humanities and Arts,Yes,,GMIT,Architecture / Design,3,IoT
+855,856,No ID Found,Medical Technology Regulatory Affairs,Galway Mayo Institute of Technology,Health Science,Yes,,GMIT,Healthcare / Medical / Nursing,9,IoT
+856,857,No ID Found,Peer Support Practice,Galway Mayo Institute of Technology,Early Childhood Studies,Yes,,GMIT,Healthcare / Medical / Nursing,9,IoT
+857,858,No ID Found,Quality for Industry,Galway Mayo Institute of Technology,Business & Administration,Yes,,GMIT,Managers / Supervisors,13,IoT
+858,859,No ID Found,Art and Design (P/T),Galway Mayo Institute of Technology,Humanities and Arts,Yes,,GMIT,Architecture / Design,3,IoT
+859,860,No ID Found,Automation and Robotics,Galway Mayo Institute of Technology,"Engineering, Manufacturing and Construction",Yes,,GMIT,Manufacturing / Engineering,14,IoT
+860,861,No ID Found,Contemporary Art Practices,Galway Mayo Institute of Technology,Humanities and Arts,Yes,,GMIT,Architecture / Design,3,IoT
+861,862,No ID Found,Data Cybersecurity,Galway Mayo Institute of Technology,Computing,Yes,,GMIT,IT,11,IoT
+862,863,No ID Found,Financial and Economic Environment,Galway Mayo Institute of Technology,Business & Administration,Yes,,GMIT,Managers / Supervisors,13,IoT
+863,864,No ID Found,Human Resource Management,Galway Mayo Institute of Technology,Business & Administration,Yes,,GMIT,HR / Recruitment,10,IoT
+864,865,No ID Found,Industrial Automation,Galway Mayo Institute of Technology,"Engineering, Manufacturing and Construction",Yes,,GMIT,Manufacturing / Engineering,14,IoT
+865,866,No ID Found,Law and Human Resource Management,Galway Mayo Institute of Technology,Business & Administration,Yes,,GMIT,HR / Recruitment,10,IoT
+866,867,No ID Found,Management for Supervisors,Galway Mayo Institute of Technology,Business & Administration,Yes,,GMIT,Managers / Supervisors,13,IoT
+867,868,No ID Found,Managing Operations,Galway Mayo Institute of Technology,Business & Administration,Yes,,GMIT,Managers / Supervisors,13,IoT
+868,869,No ID Found,Manufacturing Engineering,Galway Mayo Institute of Technology,"Engineering, Manufacturing and Construction",Yes,,GMIT,Construction / Engineering,5,IoT
+869,870,No ID Found,Network Cybersecurity,Galway Mayo Institute of Technology,Computing,Yes,,GMIT,IT,11,IoT
+870,871,No ID Found,Network Cybersecurity,Galway Mayo Institute of Technology,Computing,Yes,,GMIT,IT,11,IoT
+871,872,No ID Found,Quality and Regulatory Affairs,Galway Mayo Institute of Technology,"Engineering, Manufacturing and Construction",Yes,,GMIT,Manufacturing / Engineering,14,IoT
+872,873,No ID Found,Quality for Industry,Galway Mayo Institute of Technology,"Engineering, Manufacturing and Construction",Yes,,GMIT,Manufacturing / Engineering,14,IoT
+873,874,No ID Found,Quality Management,Galway Mayo Institute of Technology,"Engineering, Manufacturing and Construction",Yes,,GMIT,Manufacturing / Engineering,14,IoT
+874,875,No ID Found,Certificate in Training and Continuing Education (Train the Trainer Level 7),Maynooth University,School of Education,Yes,,MU,Education / Training,6,University
+875,876,No ID Found,Certificate in Psychology,Maynooth University,Applied Psychology,Yes,,MU,Healthcare / Medical / Nursing,9,University
+876,877,No ID Found,Certificate in Local History,Maynooth University,Humanities,Yes,,MU,Academic,1,University
+877,878,No ID Found,Certificate in Equality Studies (On Line) 2021,Maynooth University,School of Social Work and Social Policy,Yes,,MU,Healthcare / Medical / Nursing,9,University
+878,879,No ID Found,Certificate in Disability Studies,Maynooth University,Applied Psychology,Yes,,MU,Healthcare / Medical / Nursing,9,University
+879,880,No ID Found,Certificate in Creative Writing for Publication,Maynooth University,Humanities and Arts,Yes,,MU,Online /Digital Media,17,University
+880,881,No ID Found,Certificate in Community Development and Leadership,Maynooth University,School of Social Work and Social Policy,Yes,,MU,Healthcare / Medical / Nursing,9,University
+881,882,No ID Found,"Certificate in Adult Guidance, Theory and Practice",Maynooth University,School of Social Work and Social Policy,Yes,,MU,Healthcare / Medical / Nursing,9,University
+882,883,No ID Found,Certificate in Adult and Community Education,Maynooth University,School of Education,Yes,,MU,Education / Training,6,University
+883,884,No ID Found,Certificate in Addiction Studies,Maynooth University,Applied Psychology,Yes,,MU,Healthcare / Medical / Nursing,9,University
 884,885,TL5101: ,BLENDED LEARNING ,University of Limerick,School of Education,Yes,,UL,Education / Training,6,University
 885,886,TL5112: ,TECHNOLOGY ENHANCED LEARNING,University of Limerick,School of Education,Yes,,UL,Education / Training,6,University
 886,887,No ID Found,Certificate in Learning and Teaching,Technological University of the Shannon: Midlands Midwest Athlone Campus,School of Education,Yes,,TUS MMW,Education / Training,6,University
